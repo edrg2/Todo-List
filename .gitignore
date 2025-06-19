@@ -1,0 +1,38 @@
+# node modules
+node_modules/
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# dotenv
+.env
+.env.* 
+
+# Vite / React build
+dist/
+dist-ssr/
+*.local
+
+# Docker
+*.tar
+*.img
+
+# system
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
