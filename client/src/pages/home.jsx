@@ -1,8 +1,7 @@
-import MobileNavBar from "../components/mobile/MobileNavBar";
+import MobileNavBar from "../components/navigation/MobileNavBar";
 function Home() {
   return (
     <>
-      <MobileNavBar />
       {/* <NavAside />
       <Container /> */}
     </>
