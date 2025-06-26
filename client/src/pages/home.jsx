@@ -1,10 +1,4 @@
-import MobileNavBar from "../components/navigation/MobileNavBar";
 function Home() {
-  return (
-    <>
-      {/* <NavAside />
-      <Container /> */}
-    </>
-  );
+  return <></>;
 }
 export default Home;

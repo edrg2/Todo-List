@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import "../../assets/icons";
-import NavItem from "./NavItem";
+import NavComponents from "./NavComponents";
 
 function MobileNavBar() {
   const location = useLocation();
@@ -11,19 +11,18 @@ function MobileNavBar() {
     {
       id: "Project",
       icon: "fa-folder-closed",
-      name: "項目",
       route: "/project",
+      name: "項目",
     },
-    { id: "List", icon: "fa-list-check", name: "任務", route: "/" },
-    { id: "Calendar", icon: "fa-calendar", name: "日曆", route: "/calendar" },
-    { id: "Account", icon: "fa-user", name: "個人", route: "/account" },
+    { id: "Home", icon: "fa-list-check", route: "/", name: "任務" },
+    { id: "Calendar", icon: "fa-calendar", route: "/calendar", name: "日曆" },
+    { id: "Account", icon: "fa-user", route: "/account", name: "個人" },
   ];
 
   return (
     <nav className="mobile-nav">
       {navItems.map((item) => (
-        <NavItem
-          className="m-nav-item"
+        <NavComponents
           key={item.id}
           icon={item.icon}
           name={item.name}

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setIsMobile } from "../../features/layout/layoutSlice";
 import MobileNavBar from "../navigation/MobileNavBar";
-import DesktopNavBar from "../navigation/DesktopNavBar";
+import DesktopNavAside from "../navigation/DesktopNavAside";
 
 export default function ResponsiveLayout({ children }) {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export default function ResponsiveLayout({ children }) {
 
   return (
     <>
-      {isMobile ? <MobileNavBar /> : <DesktopNavBar />}
+      {isMobile ? <MobileNavBar /> : <DesktopNavAside />}
       <main>{children}</main>
     </>
   );

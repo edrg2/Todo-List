@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  font-family: sans-serif;
-  background-color: #404040;
-}
-
+// 電腦端
 .desktop-nav {
   height: 100vh;
   width: 300px;
@@ -18,23 +7,27 @@ body {
   flex-direction: column;
   gap: 10px;
   background-color: #202020;
-}
-.desktop-nav hr {
-  border: 0.5rem;
-  padding: 1px;
-  background-color: #333;
-}
-.desktop-nav hr:last-of-type {
-  margin-top: auto;
-}
-.desktop-nav .d-nav-main {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.desktop-nav .d-nav-group {
-  display: flex;
-  flex-direction: column;
+
+  hr {
+    border: 0.5rem;
+    padding: 1px;
+    background-color: #333;
+
+    &:last-of-type {
+      margin-top: auto;
+    }
+  }
+
+  .d-nav-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .d-nav-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .d-nav-item {
@@ -49,17 +42,21 @@ body {
   font-size: 0.95rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
-}
-.d-nav-item:hover {
-  background-color: #333;
-}
-.d-nav-item.active {
-  background-color: #333;
-}
-.d-nav-item .icon {
-  font-size: 1rem;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  &.active {
+    background-color: #333;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
 }
 
+// 手機端
 .mobile-nav {
   z-index: 100;
   position: fixed;
@@ -84,14 +81,17 @@ body {
   background: none;
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
+
+  &.active {
+    color: #58a8ff;
+    transform: scale(1.1);
+  }
+
+  .icon {
+    font-size: 1.8rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
 }
-.m-nav-item.active {
-  color: #58a8ff;
-  transform: scale(1.1);
-}
-.m-nav-item .icon {
-  font-size: 1.8rem;
-}
-.m-nav-item span {
-  font-size: 0.8rem;
-}/*# sourceMappingURL=Style.css.map */
