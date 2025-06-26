@@ -1,27 +1,33 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import "../../assets/icons";
 import NavItem from "./NavItem";
 
 function MobileNavBar() {
-  // const location = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
 
-  // options選項 彈出視窗 未做
-
   const navItems = [
-    { name: "Home", icon: "fa-house", route: "/" },
-    { name: "Project", icon: "fa-folder-closed", route: "/project" },
-    { name: "Calendar", icon: "fa-calendar", route: "/calendar" },
-    { name: "Account", icon: "fa-user", route: "/account" },
+    { id: "Options", icon: "fa-bars", name: "選項" },
+    {
+      id: "Project",
+      icon: "fa-folder-closed",
+      name: "項目",
+      route: "/project",
+    },
+    { id: "List", icon: "fa-list-check", name: "任務", route: "/" },
+    { id: "Calendar", icon: "fa-calendar", name: "日曆", route: "/calendar" },
+    { id: "Account", icon: "fa-user", name: "個人", route: "/account" },
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-white shadow-md flex justify-around py-2 z-50">
+    <nav className="mobile-nav">
       {navItems.map((item) => (
         <NavItem
-          key={item.name}
+          className="m-nav-item"
+          key={item.id}
           icon={item.icon}
-          // route={item.route}
-          // isActive={location.pathname === item.route}
+          name={item.name}
+          isActive={location.pathname === item.route}
           onClick={() => navigate(item.route)}
         />
       ))}

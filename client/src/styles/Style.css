@@ -5,5 +5,43 @@
 }
 
 body {
+  min-height: 100vh;
+  font-family: sans-serif;
   background-color: #404040;
+}
+
+.mobile-nav {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #101010;
+}
+
+.m-nav-item {
+  position: relative;
+  border: none;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #888;
+  background: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.m-nav-item.active {
+  color: #58a8ff;
+  transform: scale(1.1);
+}
+.m-nav-item .icon {
+  font-size: 28px;
+}
+.m-nav-item p {
+  font-size: 14px;
 }/*# sourceMappingURL=Style.css.map */

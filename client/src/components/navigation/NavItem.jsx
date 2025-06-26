@@ -1,7 +1,13 @@
-function NavItem({ icon, onClick }) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+function NavItem({ icon, name, isActive, onClick }) {
   return (
-    <button onClick={onClick}>
-      <i className={`fa-solid ${icon}`}></i>
+    <button
+      className={`m-nav-item ${isActive ? "active" : ""}`}
+      onClick={onClick}
+    >
+      <FontAwesomeIcon className="icon" icon={`fa-solid ${icon} fixedWidth`} />
+      <p>{name}</p>
     </button>
   );
 }
