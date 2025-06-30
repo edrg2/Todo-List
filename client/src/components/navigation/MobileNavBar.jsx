@@ -14,7 +14,7 @@ function MobileNavBar() {
       route: "/project",
       name: "項目",
     },
-    { id: "Home", icon: "fa-list-check", route: "/", name: "任務" },
+    { id: "Home", icon: "fa-list-check", route: "/today", name: "任務" },
     { id: "Calendar", icon: "fa-calendar", route: "/calendar", name: "日曆" },
     { id: "Account", icon: "fa-user", route: "/account", name: "個人" },
   ];

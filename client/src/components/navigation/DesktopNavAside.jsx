@@ -14,16 +14,16 @@ function DesktopNavAside() {
         items: [
           { id: "Today", icon: "fa-sun", route: "/today", name: "今天" },
           {
-            id: "Upcoming",
-            icon: "fa-mountain-sun",
-            route: "/upcoming",
-            name: "即將到來",
-          },
-          {
             id: "Week",
-            icon: "fa-calendar-week",
+            icon: "fa-mountain-sun",
             route: "/week",
             name: "本週",
+          },
+          {
+            id: "Later",
+            icon: "fa-calendar-week",
+            route: "/later",
+            name: "未來",
           },
         ],
       },
