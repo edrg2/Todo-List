@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import "../../assets/icons";
 import NavComponents from "./NavComponents";
+import { isNavActive } from "../../features/navigation/navUtils";
 
 function MobileNavBar() {
   const location = useLocation();
@@ -14,7 +15,7 @@ function MobileNavBar() {
       route: "/project",
       name: "項目",
     },
-    { id: "Home", icon: "fa-list-check", route: "/today", name: "任務" },
+    { id: "Home", icon: "fa-list-check", route: "/", name: "任務" },
     { id: "Calendar", icon: "fa-calendar", route: "/calendar", name: "日曆" },
     { id: "Account", icon: "fa-user", route: "/account", name: "個人" },
   ];
@@ -26,7 +27,7 @@ function MobileNavBar() {
           key={item.id}
           icon={item.icon}
           name={item.name}
-          isActive={location.pathname === item.route}
+          isActive={isNavActive(location.pathname, item.route)}
           onClick={() => navigate(item.route)}
         />
       ))}

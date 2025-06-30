@@ -5,7 +5,7 @@ function NavComponents({ icon, name, isActive, onClick }) {
   const isMobile = useSelector((state) => state.layout.isMobile);
   return (
     <button
-      className={`${isMobile ? "m" : "d"}-nav-item${isActive ? " active" : ""}`}
+      className={`${isMobile ? "m" : "d"}-nav-btn${isActive ? " active" : ""}`}
       onClick={onClick}
     >
       <FontAwesomeIcon className="icon" icon={`fa-solid ${icon}`} fixedWidth />

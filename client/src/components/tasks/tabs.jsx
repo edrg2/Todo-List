@@ -10,7 +10,7 @@ function Tabs({ activeTab, onChange }) {
       {tabs.map((tab) => (
         <button
           key={tab.key}
-          className={activeTab === tab.key ? "active" : ""}
+          className={`tab-btn${activeTab === tab.key ? " active" : ""}`}
           onClick={() => onChange(tab.key)}
         >
           {tab.label}

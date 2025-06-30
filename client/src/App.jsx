@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ResponsiveLayout from "./components/layout/ResponsiveLayout";
-import Overview from "./pages/overview/Overview";
+import Tasks from "./pages/tasks/Tasks";
 import Project from "./pages/Project";
 import Calendar from "./pages/Calendar";
 import Account from "./pages/Account";
@@ -20,7 +20,7 @@ function AppRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Navigate to="/today" />} />
-        <Route path="/:category" element={<Overview />} />
+        <Route path="/:category" element={<Tasks />} />
         <Route path="/project" element={<Project />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/account" element={<Account />} />
