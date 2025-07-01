@@ -2,28 +2,28 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "../../assets/icons";
 import NavComponents from "./NavComponents";
 
-function DesktopNavAside() {
+export default function DesktopNavAside() {
   const location = useLocation();
   const navigate = useNavigate();
 
   const NavSections = {
-    top: [{ id: "Account", icon: "fa-user", route: "/account", name: "個人" }],
+    top: [{ id: "Account", icon: "fa-user", route: "/account", label: "個人" }],
     main: [
       {
         group: "list",
         items: [
-          { id: "Today", icon: "fa-sun", route: "/today", name: "今天" },
+          { id: "Today", icon: "fa-sun", route: "/today", label: "今天" },
           {
             id: "Week",
             icon: "fa-mountain-sun",
             route: "/week",
-            name: "本週",
+            label: "本週",
           },
           {
             id: "Later",
             icon: "fa-calendar-week",
             route: "/later",
-            name: "未來",
+            label: "未來",
           },
         ],
       },
@@ -34,19 +34,19 @@ function DesktopNavAside() {
             id: "Personal",
             icon: "fa-user",
             route: "/project/personal",
-            name: "個人",
+            label: "個人",
           },
           {
             id: "Team",
             icon: "fa-users",
             route: "/project/team",
-            name: "團隊",
+            label: "團隊",
           },
         ],
       },
     ],
     bottom: [
-      { id: "Settings", icon: "fa-gear", route: "/settings", name: "設定" },
+      { id: "Settings", icon: "fa-gear", route: "/settings", label: "設定" },
     ],
   };
 
@@ -58,7 +58,7 @@ function DesktopNavAside() {
           <NavComponents
             key={item.id}
             icon={item.icon}
-            name={item.name}
+            label={item.label}
             isActive={location.pathname === item.route}
             onClick={() => navigate(item.route)}
           />
@@ -75,7 +75,7 @@ function DesktopNavAside() {
               <NavComponents
                 key={item.id}
                 icon={item.icon}
-                name={item.name}
+                label={item.label}
                 isActive={location.pathname === item.route}
                 onClick={() => navigate(item.route)}
               />
@@ -92,7 +92,7 @@ function DesktopNavAside() {
           <NavComponents
             key={item.id}
             icon={item.icon}
-            name={item.name}
+            label={item.label}
             isActive={location.pathname === item.route}
             onClick={() => navigate(item.route)}
           />
@@ -101,4 +101,3 @@ function DesktopNavAside() {
     </aside>
   );
 }
-export default DesktopNavAside;

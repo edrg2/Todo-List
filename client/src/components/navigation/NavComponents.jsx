@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector } from "react-redux";
 
-function NavComponents({ icon, name, isActive, onClick }) {
+export default function NavComponents({ icon, label, isActive, onClick }) {
   const isMobile = useSelector((state) => state.layout.isMobile);
   return (
     <button
@@ -9,8 +9,7 @@ function NavComponents({ icon, name, isActive, onClick }) {
       onClick={onClick}
     >
       <FontAwesomeIcon className="icon" icon={`fa-solid ${icon}`} fixedWidth />
-      <span>{name}</span>
+      <span>{label}</span>
     </button>
   );
 }
-export default NavComponents;
